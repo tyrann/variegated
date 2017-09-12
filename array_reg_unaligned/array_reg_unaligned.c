@@ -230,8 +230,8 @@ printf("%s \n","==========Unaligned write register test==========" );
 
 int main(int argc, char *argv[])
 {
-	run_tests();
 	srand(time(NULL));
+	run_tests();
 
 	return 0;
 } 
