@@ -10,17 +10,19 @@ int main(int argc, char *argv[])
 
 
 	insert(set, 12);
-	insert(set, 13);
+	insert(set, -1);
 	insert(set, 1);
 	
 	assert(contains(set,12));
-	assert(contains(set,13));
+	assert(contains(set,-1));
 	assert(contains(set,1));
 
-	print_inorder(set->root);
-	
-	
 
+	print_preorder(set->root);
+	printf("\n");
+	print_postorder(set->root);
+	printf("\n");
+	print_inorder(set->root);
 
 	return 0;
 }

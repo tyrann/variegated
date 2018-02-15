@@ -62,11 +62,31 @@ struct node *contains(struct ordered_set *set, int i){
 
 }
 
+void print_preorder(struct node *n){
+	if(!n){
+		return;
+	}
+	fprintf(stdout,"%d ",n->index);
+	print_inorder(n->left);
+	print_inorder(n->right);
+}
+
 void print_inorder(struct node *n){
 	if(!n){
 		return;
 	}
-	fprintf(stdout,"%ld ",n->index);
 	print_inorder(n->left);
+	fprintf(stdout,"%d ",n->index);
 	print_inorder(n->right);
 }
+
+
+void print_postorder(struct node *n){
+	if(!n){
+		return;
+	}
+	print_inorder(n->left);
+	print_inorder(n->right);
+	fprintf(stdout,"%d ",n->index);
+}
+

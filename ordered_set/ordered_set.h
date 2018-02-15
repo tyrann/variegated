@@ -2,7 +2,7 @@
 
 struct node {
 	void *data;
-	uint64_t index;
+	int index;
 
 	struct node *left;
 	struct node *right;
@@ -16,3 +16,5 @@ struct ordered_set* create_set();
 void insert(struct ordered_set *set, int i);
 struct node* contains(struct ordered_set *set, int i);
 void print_inorder(struct node *n);
+void print_preorder(struct node *n);
+void print_postorder(struct node *n);
